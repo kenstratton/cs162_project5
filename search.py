@@ -20,13 +20,13 @@ CNTLR_H = 10
 METER_T = 50
 METER_LEN = 100
 SPEED = 1500
-SPEED_L = 1000
-SPEED_S = 2000
+SPEED_L = 500
+SPEED_S = 2500
 
 # Id of an ongoing after method of Tkinter
 AFTER_ID = None
 
-# A list of 100 int values in ascending order
+# A list-type variable of 100 candidate values in ascending order 
 VALUES = []
 for i in range(100):
     if i == 0:
@@ -150,7 +150,7 @@ class Canvas(tk.Canvas):
                     font=("",14),
                     fill="black",
                     disabledfill = "#dddddd",
-                    tag = f"num_{i*10+ii}"
+                    tag = "txt_num"
                 ))
 
     # Updates numbers that low, mid, high texts highlight
@@ -164,8 +164,7 @@ class Canvas(tk.Canvas):
     # Changes the states of int value texts (disabled = it turns in non-candidate color)
     def change_num_state(self, low=None, high=None):
         if low is None:
-            for i in range(100):
-                self.itemconfig(self.num_ids[i], state="normal")
+            self.itemconfig("txt_num", state="normal")
         else:
             for i in range(low, high):
                 self.itemconfig(self.num_ids[i], state="disabled")
@@ -187,7 +186,7 @@ class Canvas(tk.Canvas):
             self.change_rect_color(self.rect_ids[high], HIGH_C)
             self.change_rect_color(self.rect_ids[mid], MID_C)
 
-    def search_animation(self, rslt, trgt):
+    def animation(self, rslt, trgt):
             if self.root.bi_search.records:
                 rec = self.root.bi_search.records[0]
 
@@ -200,9 +199,9 @@ class Canvas(tk.Canvas):
                 self.update_search_board(rec["low"], rec["mid"], rec["high"])
                 self.root.bi_search.records.pop(0)
 
-                # Back to the begining with updated arguments after adjustable delay
+                # Calls itself directory after adjustable delay
                 global AFTER_ID
-                AFTER_ID = self.root.after(SPEED, self.search_animation, rslt, trgt)
+                AFTER_ID = self.root.after(SPEED, self.animation, rslt, trgt)
             else:
                 self.root.lbl_rslt.config(text=f"Result : {rslt}")
                 self.root.process_end(trgt)
@@ -272,7 +271,7 @@ class Application(tk.Tk):
                 self.after_cancel(AFTER_ID)
             self.canvas.change_num_state()
             rslt = self.bi_search.search(int(inpt), 0, len(VALUES)-1)
-            self.canvas.search_animation(rslt, inpt)
+            self.canvas.animation(rslt, inpt)
         # Without no ongoing search, initializes a Canvas field for wrong input
         elif AFTER_ID is None:
             self.canvas.change_num_state()

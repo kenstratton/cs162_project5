@@ -1,3 +1,4 @@
+import pytest
 import os
 import sys
 
@@ -27,7 +28,7 @@ def test_search(mocker, setup):
 
 # Whether the animation is executed with an expected argument
 def test_animation(mocker, setup):
-    search_animation = mocker.patch("search.Canvas.search_animation")
+    animation = mocker.patch("search.Canvas.animation")
     setup["app"].process()
 
-    search_animation.assert_called_once_with(True, str(setup["target"]))
+    animation.assert_called_once_with(True, str(setup["target"]))
