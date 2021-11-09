@@ -174,7 +174,7 @@
     # class SpeedController
     def change_animation_speed(self, change):
         global SPEED
-        change_rate = float((change-METER_T)/METER_LEN)   # Eauals (c-p / c-scl) in the above formula
+        change_rate = float((change-METER_T)/METER_LEN)   # Equals (c-p / c-scl) in the above formula
         SPEED = int(SPEED_L + (SPEED_S*change_rate))
 
 ### ▼ Make it obvious when absence or presence of the target is found
