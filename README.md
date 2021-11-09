@@ -110,7 +110,7 @@
 
 **Records of A Search:**</br>
 ・BinarySearch().records -> [ { "low":low, "mid":mid, "high":high, state }, {}.. ]</br>
-・low, mid, high -> each index of candidate-deciding values in a collection of int values 
+・low, mid, high -> each index of candidate-deciding values in a collection of int value </br>
 ・state -> UP/DOWN : UP -> a target is greater than a mid value, DOWN -> a target is less than a mid value
 
 **Candidate:**</br>
