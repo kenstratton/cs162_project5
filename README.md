@@ -158,7 +158,6 @@
                 self.itemconfig(self.num_ids[i], state="disabled")
  
 ### ▼ Pause after highlighting the candidate value but before moving on
-(perhaps for 100-250ms based on a speed button or slider?)
 ・Pausing was implemented with *.after()* of tkinter.</br>
 ・The *animation()* has a pausing point at the end that takes some moment and calls itself again.</br>
 ・There is a speed-controlling slider in a canvas field.</br>
