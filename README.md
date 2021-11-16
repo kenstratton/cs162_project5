@@ -161,8 +161,8 @@
 ・Pausing was implemented with *.after()* of tkinter.</br>
 ・The *animation()* has a pausing point at the end that takes some moment and calls itself again.</br>
 ・There is a speed-controlling slider in a canvas field.</br>
-・Moving the slider change the SPEED variable which impacts the pausing time length.</br>
-・Update the SPEED by the SpeedController class -> *.change_animation_speed()* 
+・Moving the slider changes the SPEED variable which impacts the pausing time length.</br>
+・SPEED is updated by the SpeedController class -> *.change_animation_speed()* 
 ・Formula to update the SPEED by moving the slider: m-tm + s-scl \* (c-p / c-scl)</br>
 \* m-tm = Minimum time length, s-scl = Scale of time length, c-p = Controller position, c-scl = Scale of an area controller is movable
 
@@ -192,13 +192,13 @@
 ## Add tests
 ### ▼ Kinds of tests to verify the functionality of the searching
 ・It should be necessary to test whether the whole program by user input is proessed in expected order and gives an appropriate outcome.</br>
-・A tester would need to prepare set some data beforehand to get output in a supposed situation.</br>
+・A tester would need to prepare some data to get output in a supposed situation.</br>
 
 ### ▼ Test for Searching (pytest)
 ・Required data is set in conftest.py supported by the *.fixture()* decorator.</br>
 ・Use the pytest-mock plugin to use *mock* objects.</br>
 ・*Mock* helps alter output of methods for a while and test if interdependent methods or classes can properly work.</br>
 ・Fake a method for specific tests by *mocker* fixture -> *mocker.patch()* , 1st arg = a method path, 2nd = return_value</br>
-・Test whther a mocked method has been called only once -> *.assert_called_once_with()*, 1st arg = a method path, 2nd.. = args of the method
+・Test whether a mocked method has been called only once -> *.assert_called_once_with()*, 1st arg = a method path, 2nd.. = args of the method
 
 <img width="1069" alt="Screen Shot 2021-11-03 at 0 23 09" src="https://user-images.githubusercontent.com/77530003/139880169-dabfe081-6c41-48bc-be41-8bdfb175c21e.png">
