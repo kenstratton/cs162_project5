@@ -71,7 +71,7 @@
     
 <img width="250" alt="Screen Shot 2021-11-02 at 0 09 35" src="https://user-images.githubusercontent.com/77530003/139694206-9b38c62c-2c6e-4201-919c-251258b27bec.png">
 
-### ▼ Include a button to start the search process
+### ▼ Include a button to start the searching
 ・The Button widget provides the input space
 
     # class Application 
@@ -80,7 +80,7 @@
     
 <img width="250" alt="Screen Shot 2021-11-02 at 0 23 03" src="https://user-images.githubusercontent.com/77530003/139696282-22b639e8-7fa9-4d54-9a66-15319f0647f6.png">
 
-### ▼ Highlight the candidate value at each step of the searching process
+### ▼ Highlight the candidate value at each step of the searching
 <img width="400" alt="Screen Shot 2021-11-03 at 1 13 41" src="https://user-images.githubusercontent.com/77530003/139904655-ed504c4b-13da-42d8-82ff-bf0f91297b82.png">
 **Animation:**</br>
 ・After a search has ended, its process is displayed by the Canvas class with *animation()*.</br>
