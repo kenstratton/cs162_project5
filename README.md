@@ -114,7 +114,7 @@
 ・state -> UP/DOWN : UP -> a target is greater than a mid value, DOWN -> a target is less than a mid value
 
 **Candidate:**</br>
-・Values responsible for ruling a candidate scale are shown above rectangles, and each rectangle of them is colored.</br>
+・Values responsible for ruling a candidate scale are shown above rectangles, and each of them is colored.</br>
 ・"Low" -> blue, "Mid" -> green, and "High" -> red</br>
 ・Excecute highlighting a candidate scale -> *.update_search_board()*</br>
 ・Display the ruling value -> *.change_pos_num()*</br>
