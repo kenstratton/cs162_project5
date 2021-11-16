@@ -83,7 +83,7 @@
 ### ▼ Highlight the candidate value at each step of the searching
 <img width="400" alt="Screen Shot 2021-11-03 at 1 13 41" src="https://user-images.githubusercontent.com/77530003/139904655-ed504c4b-13da-42d8-82ff-bf0f91297b82.png">
 **Animation:**</br>
-・After a search has ended, its process is displayed by the Canvas class with *animation()*.</br>
+・After a search has ended, its processing is displayed by the Canvas class with *animation()*.</br>
 ・Args of *animation()* are a target value and records of a result(True/False) and candidates given by the searching.</br>
 ・The highlighting process of a candidate scale in *animation()* -> *.update_search_board()*</br>
 
